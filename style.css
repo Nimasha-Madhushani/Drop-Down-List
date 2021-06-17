@@ -1,0 +1,86 @@
+/*part of"CSS Reset".helps to keep your designs consistent across browsers*/
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(https://i.pinimg.com/originals/63/61/7e/63617ecffd58c4199c2e43669ba1730f.jpg);
+    background-size: 1550px 1500px;/*resize background image to cover the entire container*/
+    background-position: center;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+.menu{
+    background: rgb(79, 16, 85);
+    text-align: center;/*can see your menu in center*/
+}
+
+/*menu is aligned hirizontally*/
+.menu ul{
+    display: inline-flex;
+    list-style: none;
+    
+}
+/*arrange space in the menu*/
+.menu ul li{
+    width: 120px; 
+    margin: 15px;
+    padding: 15px;
+}
+/*remove underlining of the elements in the menu*/
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+}
+.active, .menu ul li:hover{
+    background: violet;
+    border-radius: 3px;
+}
+
+.submenu{
+    display: none;/*invisible the sub menu list*/
+    color: white;
+}
+.menu ul li:hover .submenu{
+    display: block;
+    position: absolute;
+    background-color: rgb(79, 16, 85);
+    margin-left: -15px;
+    margin-top: 15px;
+}
+/*to align the sub menu vertical*/
+.menu ul li:hover .submenu ul{
+    display: block;
+    margin: 10px;
+}
+.menu ul li:hover .submenu ul li{
+    width: 150px;
+    border-bottom: 1px dotted white;
+    padding: 10px;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.menu ul li:hover .submenu ul li:hover{
+    color: violet;
+}
+.menu ul li:hover .submenu ul li:last-child{
+    border-bottom: none;
+}
+.fa-angle-right{
+    float: right;/*move arrow head to right*/
+}
+.submenu2{
+    display: none;/*then newly created submenu is invisible*/
+
+}
+.gonext:hover .submenu2{
+    position: absolute;
+    display: block;
+    margin-left: 140px;
+    margin-top: -40px;
+    background-color: rgb(79, 16, 85);
+}
